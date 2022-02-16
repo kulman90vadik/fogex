@@ -6,11 +6,17 @@
 @import './settings/global';
 
 @import './components/header';
+@import './components/logo';
+@import './components/select-header';
+@import './components/menu';
+@import './components/burger';
 @import './components/footer';
 
 
 
-
+// <svg class="header__icon" aria-label="Вызов по клику на иконку">
+// <use xlink:href="images/sprite.svg#tel"></use>
+// </svg>
 
 
 

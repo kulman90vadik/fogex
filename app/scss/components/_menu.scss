@@ -1,0 +1,52 @@
+.menu {
+    padding-top: 23px;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 51px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 11px;
+        padding-bottom: 23px;
+        transition: color 0.3s ease-in;
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            width: 0%;
+            background-color: $global;
+            height: 3px;
+            transition: width 0.3s ease-in;
+        }
+        &::after {
+            right: 50%;
+        }
+        &::before {
+            left: 50%;
+        }
+        &:hover {
+            color: $grey;
+            &::after,
+            &::before {
+                width: 50%;
+            }
+        }
+        &:focus {
+            color: $blue;
+        }
+        &:active {
+            color: $dark-grey;
+        }
+    }
+}

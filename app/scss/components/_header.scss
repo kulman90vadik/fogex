@@ -1,0 +1,95 @@
+.header {
+    background-color: #fff;
+
+    &__top {
+        border-bottom: 1px solid $lite-blue;
+        padding: 11px 0;
+    }
+
+    &__email {
+        margin-left: auto;
+        outline: transparent;
+        color: $grey;
+        margin-right: 50px;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $blue;
+        }
+        &:focus {
+            color: $global;
+        }
+        &:active {
+            color: $dark-grey;
+        }
+    }
+
+    &__select {
+        margin-right: 35px;
+    }
+
+    &__btn {
+        background-color: $global;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 5px 20px;
+        border-radius: 3px;
+        outline: transparent;
+        line-height: 2;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        color: #fff;
+        &:hover {
+            background-color: $grey;
+        }
+        &:focus {
+            background-color: $dark-grey;
+        }
+        &:active {
+            background-color: rgba($global, 0.7);
+        }
+    }
+
+    &__catalog {
+        display: flex;
+        align-items: center;
+        padding: 21px 50px 21px;
+        border-right: 1px solid $lite-blue;
+        border-left: 1px solid $lite-blue;
+        font-weight: 700;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    &__basket {
+        position: relative; 
+        border-left: 1px solid $lite-blue;
+        border-right: 1px solid $lite-blue;
+        padding: 0 18px;
+        &::after {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            content: '';
+            right: 13px;
+            top: 16px;
+            background-color: $blue;
+        }
+        &:hover .header__icon-basket {
+            fill: $blue;
+        }
+        &:focus .header__icon-basket {
+            fill: $global;
+        }
+        &:active .header__icon-basket {
+            fill: $dark-grey;
+        }
+    }
+
+    &__icon-basket {
+        width: 20px;
+        height: 18px;
+        fill: $grey;
+        transition: fill 0.3s ease-in;
+    }
+}

@@ -1,5 +1,64 @@
 <header class="header">
-    <div class="container container--fluid">
-        gg
+    <div class="header__top">
+        <div class="container flex">
+            <a class="logo">
+                <img class="logo__images" src="images/logo.svg" alt="Логотип">
+            </a>
+            <a class="header__email" href="mailto:info@s355.ru">info@s355.ru</a>
+            <div class="header__select select-header">
+                <a class="select-header__phone select-header__phone--head" href="tel:+74952411757">
+                    +7 (495) 241-17-57
+                    <svg class="select-header__icon" aria-label="Выподающий список с номерами">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </a>   
+                <ul class="select-header__list">
+                    <li class="select-header__item">
+                        <a class="select-header__phone" href="tel:+74952411757">+7 (495) 241-17-57</a>
+                    </li>
+                    <li class="select-header__item">
+                        <a class="select-header__phone" href="tel:+74952411757">+7 (495) 241-17-57</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="header__btn btn-reset" type="button">Быстрый заказ</button>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <div class="container container--header">
+            <div class="header__catalog">
+                <button class="burger header__burger btn-reset" type="button" aria-label="Каталог продукции">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </button>
+                <span class="header__descr">Каталог продукции</span>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О компании</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">База знаний</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Новости</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Доставка</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">For suppliers</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__basket btn-reset" type="button">
+                <svg class="header__icon-basket" aria-label="Переход в корзину товаров">
+                    <use xlink:href="images/sprite.svg#basket"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 </header>

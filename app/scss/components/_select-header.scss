@@ -1,0 +1,59 @@
+.select-header {
+    position: relative;
+    &:hover .select-header__icon {
+        transform: rotate(180deg);
+        fill: $global;
+    }
+    &:hover .select-header__list {
+        transform: scaleY(1);
+        z-index: 1;
+    }
+    
+    &__phone {
+        font-size: 18px;
+        line-height: 1.16;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &--head {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 3px 0;
+        }
+        &:hover {
+            color: $global;
+        }
+        &:active {
+            color: $dark-grey;
+        }
+        &:focus {
+            color: $blue;
+        }
+    }
+
+    &__icon {
+        width: 10px;
+        height: 6px;
+        fill: $global;
+        margin-left: 5px;
+        transition: transform 0.3s ease-in, fill 0.3s ease-in;
+    }
+
+    &__list {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        top: 25px;
+        width: 100%;
+        padding: 5px 5px 5px 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}

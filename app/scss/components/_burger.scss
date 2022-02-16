@@ -1,0 +1,12 @@
+.burger {
+    margin-right: 10px;
+    &__item {
+        display: block;
+        height: 2px;
+        width: 22px;
+        background-color: $global;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}

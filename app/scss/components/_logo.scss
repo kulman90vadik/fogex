@@ -1,0 +1,9 @@
+.logo {
+    display: flex;
+    width: 233px;
+    height: 34px;
+    &__images {
+        object-fit: cover;
+        width: 100%;
+    }
+}
