@@ -1,0 +1,81 @@
+.service {
+    background-color: #f7f7f8;
+    margin-bottom: 100px;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        &:not(:last-child) {
+            border-right: 2px solid #fff;
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        background-color: #f7f7f8;
+        padding: 25px 40px 27px 27px;
+        transition: background-color 0.3s ease-in;
+        &:hover  {
+            background-color: #fff;
+            .service__icon {
+                fill: $blue;
+            }
+            .service__name {
+                color: $blue;
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    &__icon {
+        margin-right: 15px;
+        fill: $global;
+        transition: fill 0.3s ease-in;
+        &--certificate {
+            width: 37px;
+            height: 40px;
+        }
+        &--metalworking {
+            width: 40px;
+            height: 47px;
+        }
+        &--test {
+            width: 40px;
+            height: 45px;
+        }
+        &--delivery {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.33;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+        transition: color 0.3s ease-in;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 18px;
+        color: $grey;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 4;
+        }
+    }
+
+   
+}

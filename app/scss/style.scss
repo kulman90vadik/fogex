@@ -10,6 +10,8 @@
 @import './components/select-header';
 @import './components/menu';
 @import './components/burger';
+@import './home';
+@import './service';
 @import './components/footer';
 
 
@@ -23,7 +25,8 @@
 
 
 
-
+// @include lineClamp;
+//         -webkit-line-clamp: 1;
 
 
 
