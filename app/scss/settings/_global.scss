@@ -58,3 +58,54 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.19;
+}
+
+
+.link {
+    display: flex;
+    align-items: center;
+    &__text {
+        margin-right: 10px;
+        display: block;
+        line-height: 1.18;
+        font-size: 22px;
+        color: $blue;
+        transition: color 0.3s ease-in;
+    }
+    &__icon {
+        width: 46px;
+        height: 8px;
+        fill: $blue;
+        margin-top: 3px;
+        transition: fill 0.3s ease-in;
+    }
+    &:hover {
+        .link__text {
+            color: $global;
+        }
+        .link__icon {
+            fill: $global;
+        }
+    }
+    &:focus {
+        .link__text {
+            color: $dark-grey;
+        }
+        .link__icon {
+            fill: $dark-grey;
+        }
+    }
+    &:active {
+        .link__text {
+            color: $grey;
+        }
+        .link__icon {
+            fill: $grey;
+        }
+    }
+}

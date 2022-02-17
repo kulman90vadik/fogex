@@ -1,0 +1,22 @@
+.projects {
+    margin-bottom: 100px;
+    &__heading {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 555px;
+        height: 400px;
+        width: 100%;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+
+}
