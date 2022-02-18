@@ -3,6 +3,9 @@
     background-position: bottom;
     position: relative;
     z-index: 1;
+    &--active {
+        margin-top: 119px;
+    }
     &::after {
         position: absolute;
         content: '';
@@ -16,8 +19,6 @@
     }
 
     &__inner {
-        // position: relative;
-        // z-index: 5;
         min-height: 540px;
         padding-bottom: 70px;
         display: flex;

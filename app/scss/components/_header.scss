@@ -1,9 +1,17 @@
 .header {
     background-color: #fff;
-
+    &--active {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 144;
+    }
     &__top {
         border-bottom: 1px solid $lite-blue;
         padding: 11px 0;
+        &--active {
+            display: none;
+        }
     }
 
     &__email {

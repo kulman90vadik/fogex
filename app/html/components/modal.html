@@ -1,0 +1,75 @@
+<div class="modal">
+    <div class="modal__inner">
+        <div class="modal__content">
+            <button class="modal__close btn-reset modal-exit" type="button">
+                <svg class="modal__icon">
+                    <use xlink:href="images/sprite.svg#exit"></use>
+                </svg>
+            </button>
+            <span class="modal__subtitle">Быстрый заказ</span>
+            <div class="modal__info">
+                <span class="modal__name">Балка HE 400x299 (S235JR / 1.0038)</span>
+                <div class="modal__coutner">
+                    <div class="modal__coutner-item">
+                        <div class="modal__holder">
+                            <span class="modal__text">Кол-во</span>
+                            <span class="modal__number"></span>
+                            <div class="modal__scoring">
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-plus">
+                                        <use xlink:href="images/sprite.svg#arrow-plus"></use>
+                                    </svg>
+                                </button>
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-minus">
+                                        <use xlink:href="images/sprite.svg#arrow-minus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__coutner-item">
+                        <div class="modal__holder modal__holder--small">
+                            <span class="modal__text">м =</span>
+                            <span class="modal__number"></span>
+                            <div class="modal__scoring">
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-plus">
+                                        <use xlink:href="images/sprite.svg#arrow-plus"></use>
+                                    </svg>
+                                </button>
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-minus">
+                                        <use xlink:href="images/sprite.svg#arrow-minus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <span class="modal__text">т</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="modal__form" action="#">
+                <label class="visually-hidden" for="name">Текстовое поля, для ввода Вашего имени</label>
+                <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя">
+                <label class="visually-hidden" for="tel">Текстовое поля, для ввода Вашего телефона</label>
+                <input class="modal__input" type="tel" id="tel" name="tel" placeholder="Номер телефона">
+                <label class="visually-hidden" for="email">Текстовое поля, для ввода Вашего E-mail</label>
+                <input class="modal__input" type="email" id="email" name="email" placeholder="E-mail">
+                <label class="visually-hidden" for="text">Текстовое поля, для комментарий к заказу</label>
+                <textarea class="modal__input modal__input--textarea" id="text" name="text" placeholder="Комментарий к заказу"></textarea>
+
+                <label class="modal__label">
+                    <input class="modal__file" type="file" name="file">
+                    <svg class="modal__icon-file">
+                        <use xlink:href="images/sprite.svg#file"></use>
+                    </svg>
+                    <span class="modal__description">Прикрепить файл</span>
+                </label>
+
+                <button class="modal__submit btn-reset modal-exit" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,38 @@
 
 window.addEventListener("load", function(){
 
+// СКРОЛЛ - ЛИПКИЙ HEADER
+
+    window.addEventListener('scroll', function(){
+        if(window.scrollY >= 150) {
+            document.querySelector('.header').classList.add('header--active');
+            document.querySelector('.header__top').classList.add('header__top--active');
+            document.querySelector('.home').classList.add('home--active');
+        }
+        else {
+            document.querySelector('.header').classList.remove('header--active');
+            document.querySelector('.header__top').classList.remove('header__top--active');
+            document.querySelector('.home').classList.remove('home--active');
+        }
+    });
+
+// МОДАЛЬНОЕ ОКНО
+
+    document.querySelector('.header__btn').addEventListener('click', function(){
+        document.querySelector('.modal').classList.add('modal--active');
+        document.querySelector('.modal__inner').classList.add('modal__inner--active');
+    });
+
+    document.querySelectorAll('.modal-exit').forEach(btn => {
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('.modal__inner').classList.remove('modal__inner--active');
+            document.querySelector('.modal').classList.remove('modal--active');
+        });
+    });
+    
+// СЛИДЕР ПОПУЛЯРНЫЕ НОВОСТИ
+
     new Swiper('.news-swiper', {
         wrapperClass: 'news-swiper__slider',
         slideClass: 'news-swiper__slide',
@@ -13,6 +45,8 @@ window.addEventListener("load", function(){
         },
     });
 
+// СЛИДЕР НАШИ БРЕНДЫ    
+
     new Swiper('.brands-swiper', {
         wrapperClass: 'brands-swiper__slider',
         slideClass: 'brands-swiper__slide',
@@ -23,7 +57,7 @@ window.addEventListener("load", function(){
         },
     });
 
-    // КНОПКА ВВЕРХ
+// КНОПКА ВВЕРХ
 
     function trackScroll() {
         let scrollPageY = window.pageYOffset;
@@ -45,6 +79,19 @@ window.addEventListener("load", function(){
     window.addEventListener('scroll', trackScroll);
     backUp.addEventListener('click', backToTop);
 
+// СКРОЛЛ ПО СЕКЦИЯМ
 
+    const headerLinks = document.querySelectorAll('.header__link--scroll');
+    for (let link of headerLinks) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = link.getAttribute('href').substr(1);
+        
+            document.getElementById(section).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
 
 });

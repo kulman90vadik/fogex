@@ -50,19 +50,19 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="#">О компании</a>
+                        <a class="menu__link header__link--scroll" href="#company">О компании</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">База знаний</a>
+                        <a class="menu__link header__link--scroll" href="#brands">База знаний</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Новости</a>
+                        <a class="menu__link header__link--scroll" href="#news">Новости</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Доставка</a>
+                        <a class="menu__link header__link--scroll" href="#projects">Доставка</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">For suppliers</a>
+                        <a class="menu__link header__link--scroll" href="#footer">For suppliers</a>
                     </li>
                 </ul>
             </nav>
@@ -156,7 +156,7 @@
         </ul>
     </div>
 </section>
-        <section class="projects">
+        <section class="projects" id="projects">
     <div class="container">
         <div class="heading flex projects__heading">
             <h2 class="title projects__title">Наши проекты</h2>
@@ -197,7 +197,7 @@
         </ul>
     </div>
 </section>
-        <section class="company" style="background-image: url(images/company-bg.jpg);">
+        <section class="company" style="background-image: url(images/company-bg.jpg);" id="company">
     <div class="container">
         <div class="heading flex heading--white">
             <h2 class="title">О компании</h2>
@@ -230,7 +230,7 @@
         </ul>
     </div>
 </section>
-        <section class="news">
+        <section class="news" id="news">
     <div class="container">
         <div class="heading flex news__heading">
             <h2 class="title projects__title">Популярные новости</h2>
@@ -309,7 +309,7 @@
     </div>
 
 </section>
-        <section class="brands">
+        <section class="brands" id="brands">
     <div class="container">
         <div class="heading flex brands__heading">
             <h2 class="title">Наши бренды</h2>
@@ -413,9 +413,83 @@
     </div>
 
 </section>
-        
+        <div class="modal">
+    <div class="modal__inner">
+        <div class="modal__content">
+            <button class="modal__close btn-reset modal-exit" type="button">
+                <svg class="modal__icon">
+                    <use xlink:href="images/sprite.svg#exit"></use>
+                </svg>
+            </button>
+            <span class="modal__subtitle">Быстрый заказ</span>
+            <div class="modal__info">
+                <span class="modal__name">Балка HE 400x299 (S235JR / 1.0038)</span>
+                <div class="modal__coutner">
+                    <div class="modal__coutner-item">
+                        <div class="modal__holder">
+                            <span class="modal__text">Кол-во</span>
+                            <span class="modal__number"></span>
+                            <div class="modal__scoring">
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-plus">
+                                        <use xlink:href="images/sprite.svg#arrow-plus"></use>
+                                    </svg>
+                                </button>
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-minus">
+                                        <use xlink:href="images/sprite.svg#arrow-minus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__coutner-item">
+                        <div class="modal__holder modal__holder--small">
+                            <span class="modal__text">м =</span>
+                            <span class="modal__number"></span>
+                            <div class="modal__scoring">
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-plus">
+                                        <use xlink:href="images/sprite.svg#arrow-plus"></use>
+                                    </svg>
+                                </button>
+                                <button class="modal__arrow btn-reset" type="button">
+                                    <svg class="modal__icon-minus">
+                                        <use xlink:href="images/sprite.svg#arrow-minus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <span class="modal__text">т</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="modal__form" action="#">
+                <label class="visually-hidden" for="name">Текстовое поля, для ввода Вашего имени</label>
+                <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя">
+                <label class="visually-hidden" for="tel">Текстовое поля, для ввода Вашего телефона</label>
+                <input class="modal__input" type="tel" id="tel" name="tel" placeholder="Номер телефона">
+                <label class="visually-hidden" for="email">Текстовое поля, для ввода Вашего E-mail</label>
+                <input class="modal__input" type="email" id="email" name="email" placeholder="E-mail">
+                <label class="visually-hidden" for="text">Текстовое поля, для комментарий к заказу</label>
+                <textarea class="modal__input modal__input--textarea" id="text" name="text" placeholder="Комментарий к заказу"></textarea>
+
+                <label class="modal__label">
+                    <input class="modal__file" type="file" name="file">
+                    <svg class="modal__icon-file">
+                        <use xlink:href="images/sprite.svg#file"></use>
+                    </svg>
+                    <span class="modal__description">Прикрепить файл</span>
+                </label>
+
+                <button class="modal__submit btn-reset modal-exit" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
     </main>    
-    <footer class="footer">
+    <footer class="footer" id="footer">
     <h2 class="visually-hidden">Подвал сайта с контактами</h2>
     <div class="container">
         <ul class="footer__inner">
