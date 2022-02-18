@@ -1,10 +1,6 @@
 
 window.addEventListener("load", function(){
 
-    // document.querySelector('.select-header__phone--head').addEventListener('', function() {
-
-    // });
-
     new Swiper('.news-swiper', {
         wrapperClass: 'news-swiper__slider',
         slideClass: 'news-swiper__slide',
@@ -17,7 +13,7 @@ window.addEventListener("load", function(){
         },
     });
 
-    const mySwiper = new Swiper('.brands-swiper', {
+    new Swiper('.brands-swiper', {
         wrapperClass: 'brands-swiper__slider',
         slideClass: 'brands-swiper__slide',
         slidesPerView: '6',
@@ -27,17 +23,28 @@ window.addEventListener("load", function(){
         },
     });
 
-    
+    // КНОПКА ВВЕРХ
 
-    // const swiperPrev = document.getElementById('swiperPrev');
-    // const swiperNext = document.getElementById('swiperNext');
-    
-    // swiperPrev.addEventListener('click', () => {
-    //     mySwiper.slidePrev();
-    // });
-    // swiperNext.addEventListener('click', () => {
-    //     mySwiper.slideNext();
-    // });
+    function trackScroll() {
+        let scrollPageY = window.pageYOffset;
+        let heightPage = document.documentElement.clientHeight;
+        if (scrollPageY > heightPage) {
+            backUp.classList.add('back-up--top');
+        }
+        if (scrollPageY < heightPage) {
+            backUp.classList.remove('back-up--top');
+        }
+    }
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 0);
+        }
+    }
+    let backUp = document.querySelector('.back-up');
+    window.addEventListener('scroll', trackScroll);
+    backUp.addEventListener('click', backToTop);
+
 
 
 });
