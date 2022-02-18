@@ -2,6 +2,7 @@
     @include bg;
     background-position: bottom;
     position: relative;
+    z-index: 1;
     &::after {
         position: absolute;
         content: '';
@@ -11,11 +12,12 @@
         top: 0;
         background-image: linear-gradient(180deg, rgba(2, 32, 92, 0.3332) 0%, rgba(2, 32, 92, 0.4624) 100%);
         opacity: 0.6;
+        z-index: -1;
     }
 
     &__inner {
-        position: relative;
-        z-index: 5;
+        // position: relative;
+        // z-index: 5;
         min-height: 540px;
         padding-bottom: 70px;
         display: flex;
