@@ -1,5 +1,8 @@
 .menu {
     padding-top: 23px;
+    @include max($lg) {
+        padding-top: 11px;
+    }
     &__list {
         display: flex;
         align-items: center;
@@ -8,6 +11,9 @@
     &__item {
         &:not(:last-child) {
             margin-right: 51px;
+            @include max($lg) {
+                margin-right: 20px;
+            }
         }
     }
 
@@ -19,6 +25,9 @@
         font-size: 11px;
         padding-bottom: 23px;
         transition: color 0.3s ease-in;
+        @include max($lg) {
+            padding-bottom: 11px;
+        }
         &::after,
         &::before {
             position: absolute;

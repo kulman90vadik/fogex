@@ -1,5 +1,5 @@
 
-window.addEventListener("load", function(){
+window.addEventListener('load', function(){
 
 // СКРОЛЛ - ЛИПКИЙ HEADER
 

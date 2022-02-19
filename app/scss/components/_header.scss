@@ -65,6 +65,9 @@
         font-weight: 700;
         font-size: 11px;
         text-transform: uppercase;
+        @include max($lg) {
+            padding: 11px 20px;
+        }
     }
 
     &__basket {
