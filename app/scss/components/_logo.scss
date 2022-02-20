@@ -6,4 +6,12 @@
         object-fit: cover;
         width: 100%;
     }
+    @include max($lg) {
+        width: 180px;
+        height: 25px;
+    }
+    @include max($s) {
+        width: 139px;
+        height: 20px;
+    }
 }

@@ -1,14 +1,31 @@
 .service {
     background-color: #f7f7f8;
     margin-bottom: 100px;
+    @include max($xl) {
+        margin-bottom: 50px;
+    }
+    @include max($sm) {
+        margin-bottom: 30px;
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        @include max($lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include max($md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__item {
         &:not(:last-child) {
             border-right: 2px solid #fff;
+        }
+        &:last-child {
+            @include max($lg) {
+                border-right: 2px solid #fff;
+            }
         }
     }
 
@@ -26,6 +43,9 @@
             .service__name {
                 color: $blue;
             }
+        }
+        @include max($xl) {
+            padding: 20px 15px;
         }
     }
 
@@ -73,7 +93,7 @@
         color: $grey;
         p {
             @include lineClamp;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 5;
         }
     }
 

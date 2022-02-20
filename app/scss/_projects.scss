@@ -1,12 +1,24 @@
 .projects {
     margin-bottom: 100px;
+    @include max($xl) {
+        margin-bottom: 50px;
+    }
+    @include max($sm) {
+        margin-bottom: 30px;
+    }
     &__heading {
         margin-bottom: 50px;
+        @include max($xl) {
+            margin-bottom: 30px;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
+        @include max($sm) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -15,8 +27,19 @@
         width: 100%;
         &:not(:last-child) {
             margin-right: 10px;
+            @include max($sm) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        @include max($lg) {
+            height: 300px;
+        }
+        @include max($md) {
+            height: 250px;
+        }
+        @include max($sm) {
+            max-width: 100%;
         }
     }
-
-
 }

@@ -1,12 +1,15 @@
 .burger {
-    margin-right: 10px;
     &__item {
         display: block;
         height: 2px;
         width: 22px;
         background-color: $global;
+        transition: background-color 0.3s ease-in;
         &:not(:last-child) {
             margin-bottom: 5px;
+        }
+        @include max($lg) {
+            width: 19px;
         }
     }
 }

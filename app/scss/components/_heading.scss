@@ -1,6 +1,15 @@
 .heading {
     padding-bottom: 40px;
     border-bottom: 2px solid $global;
+    @include max($lg) {
+        padding-bottom: 20px;
+    }
+    @include max($md) {
+        padding-bottom: 10px;
+    }
+    @include max($sm) {
+        display: block;
+    }
     &--white {
         color: #fff;
         border-color: #fff;

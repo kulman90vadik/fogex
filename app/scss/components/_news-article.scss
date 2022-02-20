@@ -18,6 +18,15 @@
         border-radius: 3px;
         background-color: #fff;
         transition: box-shadow 0.3s ease-in;
+        @include max($lg) {
+            padding: 25px;
+        }
+        @include max($md) {
+            padding: 15px;
+        }
+        @include max($sm) {
+            padding: 10px;
+        }
     }
 
     &__name {
@@ -28,14 +37,29 @@
         transition: color 0.3s ease-in;
         @include lineClamp;
         -webkit-line-clamp: 4;
+        @include max($lg) {
+            font-size: 24px;
+        }
+        @include max($sm) {
+            font-size: 22px;
+        }
+        @include max($s) {
+            font-size: 19px;
+        }
     }
 
     &__text {
         color: $grey;
         margin-bottom: 45px;
+        @include max($lg) {
+            margin-bottom: 20px;
+        }
+        @include max($sm) {
+            margin-bottom: 15px;
+        }
         p {
             @include lineClamp;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 4;
         }
     }
 

@@ -26,6 +26,10 @@
         &--active {
             transition: transform 0.5s ease-in;
             transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+            @include max($xl) {
+                align-items: start;
+                padding-top: 20px;
+            }
         }
     }
 
@@ -35,6 +39,12 @@
         position: relative;
         background-color: #fff;
         border-radius: 5px;
+        @include max($sm) {
+            max-width: 310px;
+        }
+        @include max($s) {
+            max-width: 290px;
+        }
     }
 
     &__close {
@@ -44,6 +54,10 @@
         height: 20.7px;
         position: absolute;
         padding: 0;
+        @include max($s) {
+            right: 10px;
+            top: 10px;
+        }
         &:hover {
             .modal__icon {
                 fill: $blue;
@@ -66,6 +80,9 @@
         width: 100%;
         height: 100%;
         transition: fill 0.3s ease-in;
+        @include max($s) {
+            fill: #ccc;
+        }
     }
 
     &__subtitle {
@@ -156,6 +173,9 @@
 
     &__form {
         padding: 20px 50px 40px 50px;
+        @include max($sm) {
+            padding: 15px 20px 20px 20px;
+        }
     }
 
     &__input {

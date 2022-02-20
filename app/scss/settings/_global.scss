@@ -63,6 +63,12 @@ body {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.19;
+    @include max($md) {
+        font-size: 30px;
+    }
+    @include max($sm) {
+        font-size: 28px;
+    }
 }
 
 
@@ -76,6 +82,9 @@ body {
         font-size: 22px;
         color: $blue;
         transition: color 0.3s ease-in;
+        @include max($md) {
+            font-size: 18px;
+        }
     }
     &__icon {
         width: 46px;
@@ -108,4 +117,15 @@ body {
             fill: $grey;
         }
     }
+}
+
+
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
 }

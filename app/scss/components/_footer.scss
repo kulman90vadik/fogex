@@ -1,29 +1,95 @@
 .footer {
     background-image: linear-gradient(0deg, #f7f7f8, #f7f7f8);
     padding-top: 60px;
-
+    @include max($xl) {
+        padding-top: 30px;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
         padding-bottom: 60px;
+        @include max($xl) {
+            padding-bottom: 30px;
+        }
+        @include max($lg) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
     }
 
     &__items {
         width: 100%;
         &:not(:last-child) {
             margin-right: 10px;
+            @include max($lg) {
+                margin-right: 0;
+            }
+        }
+        @include max($lg) {
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        @include max($md) {
+            padding: 10px;
         }
         &--contact {
             max-width: 260px;
-        }
+            @include max($xl) {
+                max-width: 210px;
+            }
+            @include max($lg) {
+                max-width: 35%;
+            }
+            @include max($md) {
+                max-width: 45%;
+            }
+            @include max($sm) {
+                max-width: 100%;
+            }
+        }    
         &--catalog {
             max-width: 345px;
+            @include max($xl) {
+                max-width: 285px;
+            }
+            @include max($lg) {
+                max-width: 63%;
+            }
+            @include max($md) {
+                order: 1;
+                max-width: 61%;
+            }
+            @include max($sm) {
+                max-width: 100%;
+            }
         }
         &--navigation {
             max-width: 121px;
+            @include max($lg) {
+                max-width: 35%;
+            }
+            @include max($md) {
+                order: 1;
+                max-width: 37%;
+            }
+            @include max($sm) {
+                max-width: 100%;
+            }
         }
         &--callback {
             max-width: 271px;
+            @include max($lg) {
+                max-width: 63%;
+            }
+            @include max($md) {
+                max-width: 53%;
+            }
+            @include max($sm) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -33,6 +99,12 @@
         margin-bottom: 25px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 11px;
+        }
+        @include max($sm) {
+            margin-bottom: 5px;
+        }
     }
 
     &__phone, 
@@ -59,6 +131,9 @@
         outline: transparent;
         padding-left: 27px;
         transition: color 0.3s ease-in;
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
         &:hover {
             color: $global;
         }
@@ -119,6 +194,9 @@
         font-size: 14px;
         outline: transparent;
         transition: color 0.3s ease-in;
+        @include max($lg) {
+            line-height: 1.5;
+        }
         &:hover {
             color: $global;
         }  
@@ -148,6 +226,9 @@
             font-size: 14px;
             padding-bottom: 0;
             line-height: 2.57;
+            @include max($lg) {
+                line-height: 1.5;
+            }
             &::after {
                 display: none;
             }
@@ -168,6 +249,9 @@
         font-size: 14px;
         color: $grey;
         margin-bottom: 30px;
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
         p {
             @include lineClamp;
             -webkit-line-clamp: 4;
@@ -234,6 +318,9 @@
     &__copy {
         background-image: linear-gradient(0deg, #fff, #fff), linear-gradient(0deg, #f3f3f4, #f3f3f4);
         padding: 23px 0;
+        @include max($lg) {
+            padding: 12px 0;
+        }
     }
 
     &__description {

@@ -1,6 +1,9 @@
 .news {
     &__heading {
         margin-bottom: 50px;
+        @include max($xl) {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -8,6 +11,15 @@
     overflow: hidden;
     width: 100%;
     height: 318px;
+    @include max($lg) {
+        height: 300px;
+    }
+    @include max($md) {
+        height: 280px;
+    }
+    @include max($sm) {
+        height: 240px;
+    }
     &__slider {
         display: flex;
         width: 100%;
@@ -17,5 +29,14 @@
     &__slide {
         flex-shrink: 0;
         width: 555px !important;
+        @include max($lg) {
+            width: 55% !important;
+        }
+        @include max($md) {
+            width: 75% !important;
+        }
+        @include max($sm) {
+            width: 100% !important;
+        }
     }
 }

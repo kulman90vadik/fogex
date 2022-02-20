@@ -6,7 +6,7 @@
     }
     &:hover .select-header__list {
         transform: scaleY(1);
-        z-index: 1;
+        z-index: 122;
     }
     
     &__phone {
@@ -29,6 +29,9 @@
         &:focus {
             color: $blue;
         }
+        @include max($sm) {
+            font-size: 16px;
+        }
     }
 
     &__icon {
@@ -45,10 +48,11 @@
         left: 0;
         top: 25px;
         width: 100%;
-        padding: 5px 5px 5px 0;
+        padding: 5px;
         transform: scaleY(0);
         transform-origin: top;
         transition: transform 0.3s ease-in;
+        z-index: 10;
     }
 
     &__item {

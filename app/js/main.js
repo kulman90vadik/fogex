@@ -43,6 +43,17 @@ window.addEventListener('load', function(){
         autoplay: {
             delay: 5000,
         },
+        breakpoints: {
+            320: {
+                slidesPerView: '1',
+                spaceBetween: 10,
+            },
+            540: {
+                spaceBetween: 30,
+                centeredSlides: true,
+                slidesPerView: '3',
+            },
+        }
     });
 
 // СЛИДЕР НАШИ БРЕНДЫ    
@@ -50,11 +61,34 @@ window.addEventListener('load', function(){
     new Swiper('.brands-swiper', {
         wrapperClass: 'brands-swiper__slider',
         slideClass: 'brands-swiper__slide',
-        slidesPerView: '6',
+        // slidesPerView: '6',
         navigation: {
             nextEl: '.brands-swiper__arrow--next',
             prevEl: '.brands-swiper__arrow--prev',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: '1',
+            },
+            400: {
+                spaceBetween: 0,
+                slidesPerView: '2',
+            },
+            625: {
+                spaceBetween: 5,
+                slidesPerView: '3',
+            },
+            825: {
+                slidesPerView: '4',
+            },
+            1025: {
+                slidesPerView: '5',
+            },
+            1200: {
+                spaceBetween: 0,
+                slidesPerView: '6',
+            },
+        }
     });
 
 // КНОПКА ВВЕРХ
@@ -86,12 +120,31 @@ window.addEventListener('load', function(){
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const section = link.getAttribute('href').substr(1);
-        
+
+
+            document.querySelector('.header__menu').classList.toggle('header__menu--active');
+            document.body.classList.toggle('disable-scroll');
+            let menuBurger = document.querySelector('.header__burger-menu');
+            let menuBurgerItems = menuBurger.querySelectorAll('.burger__item');
+            menuBurgerItems.forEach(elem => {
+                elem.classList.toggle('burger__item--active');
+            });
             document.getElementById(section).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
         });
     }
+
+// ВЫЕЗЖАЮЩЕЕ МЕНЮ
+
+    document.querySelector('.header__burger-menu').addEventListener('click', function(){
+        document.body.classList.toggle('disable-scroll');
+        document.querySelector('.header__menu').classList.toggle('header__menu--active');
+        let itemsBtn = this.querySelectorAll('.burger__item');
+        itemsBtn.forEach(elem => {
+            elem.classList.toggle('burger__item--active');
+        });
+    });
 
 });

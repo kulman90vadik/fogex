@@ -23,6 +23,13 @@
         background-color: #fff;
         overflow: hidden;
         transition: padding-bottom 0.3s ease, bottom 0.3s ease;
+        @include max($md) {
+            padding: 10px 30px;
+            bottom: 0;
+        }
+        @include max($md) {
+            padding: 10px;
+        }
     }
 
     &__title {
@@ -33,6 +40,12 @@
         font-size: 24px;
         @include lineClamp;
         -webkit-line-clamp: 3;
+        @include max($lg) {
+            font-size: 20px;
+        }
+        @include max($md) {
+            font-size: 17px;
+        }
     }
 
     & .link {
@@ -41,6 +54,8 @@
         &__text {
             font-size: 16px;
         } 
-
+        @include max($md) {
+            transform: translateY(0%);
+        }
     }
 }

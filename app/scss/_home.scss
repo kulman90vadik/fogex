@@ -5,6 +5,12 @@
     z-index: 1;
     &--active {
         margin-top: 119px;
+        @include max($lg) {
+            margin-top: 85px;
+        }
+        @include max($sm) {
+            margin-top: 76px;
+        }
     }
     &::after {
         position: absolute;
@@ -24,6 +30,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        @include max($lg) {
+            min-height: 410px;
+            justify-content: center;
+        }
     }
 
     &__description {
@@ -35,6 +45,9 @@
         text-transform: uppercase;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($s) {
+            font-size: 14px;
+        }
     }
 
     &__name {
@@ -46,6 +59,15 @@
         color: #fff;
         @include lineClamp;
         -webkit-line-clamp: 4;
+        @include max($lg) {
+            font-size: 45px;
+        }
+        @include max($sm) {
+            font-size: 35px;
+        }
+        @include max($s) {
+            font-size: 30px;
+        }
     }
 }
 
